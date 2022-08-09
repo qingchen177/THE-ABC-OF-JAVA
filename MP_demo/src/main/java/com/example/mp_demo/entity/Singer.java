@@ -4,11 +4,13 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import java.io.Serializable;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
+
+import java.io.Serializable;
 
 /**
  * <p>
@@ -20,6 +22,7 @@ import lombok.Setter;
  */
 @Getter
 @Setter
+@ToString
 @TableName("singer")
 @ApiModel(value = "Singer对象", description = "歌手表")
 public class Singer implements Serializable {
