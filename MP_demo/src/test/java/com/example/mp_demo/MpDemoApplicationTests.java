@@ -292,4 +292,29 @@ class MpDemoApplicationTests {
         singerService.update().eq("age", 18).remove();
         singerService.lambdaUpdate().eq(Singer::getName,"周杰伦2").update(singer);
     }
+
+    @Test
+    void wrapper(){
+        QueryWrapper<Singer> wrapper=new QueryWrapper();
+
+        Map map=new HashMap();
+
+        map.put("name","周杰伦9");
+        map.put("age",16);
+
+        List ages=new ArrayList();
+
+        ages.add(18);
+        ages.add(16);
+        ages.add(15);
+
+//        wrapper.allEq((k,v) -> k.indexOf("a") >= 0,map,false);
+
+//        wrapper.in("age",ages);
+//        wrapper.in("age",15,0,1);
+//        wrapper.groupBy("id").having("sum(age)>10");
+//        wrapper.select(i ->i.getProperty().startsWith(""));
+        List<Singer> list = singerService.list(wrapper);
+        list.forEach(System.out::println);
+    }
 }
