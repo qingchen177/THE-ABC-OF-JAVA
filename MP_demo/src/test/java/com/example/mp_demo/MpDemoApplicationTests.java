@@ -1,6 +1,7 @@
 package com.example.mp_demo;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.example.mp_demo.entity.Singer;
@@ -240,9 +241,9 @@ class MpDemoApplicationTests {
         QueryWrapper<Singer> wrapper=new QueryWrapper();
         Singer byId = singerService.getById("1556883204896604161");
         System.out.println("byId = " + byId);
-        wrapper.eq("age",18);
+        wrapper.eq("age",55);
         wrapper.last("LIMIT 1");
-        singerService.getOne(wrapper,true);
+//        singerService.getOne(wrapper,true);
         Singer one = singerService.getOne(wrapper);
         System.out.println("one = " + one);
     }
@@ -291,6 +292,12 @@ class MpDemoApplicationTests {
         singer.setOther("爱你穿越时间，两行来自秋末的眼泪");
         singerService.update().eq("age", 18).remove();
         singerService.lambdaUpdate().eq(Singer::getName,"周杰伦2").update(singer);
+
+        UpdateWrapper<Singer> updateWrapper=new UpdateWrapper<>();
+
+        updateWrapper.lambda().eq(Singer::getName,"周杰伦001")
+                .set(Singer::getAge,1);
+        singerService.update(updateWrapper);
     }
 
     @Test
