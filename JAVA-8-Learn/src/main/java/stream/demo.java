@@ -27,6 +27,18 @@ public class demo {
         int[] intArr = {1, 2, 3, 4, 5, 6};
         IntStream intStream = Arrays.stream(intArr);
 
+//        Arrays.sort(intArr);
+//        Arrays.asList();
+//        Arrays.binarySearch(intArr,2);
+//        Arrays.copyOf(intArr,3);
+//        Arrays.copyOfRange();
+//        Arrays.deepEquals();
+//        Arrays.deepHashCode();
+//        Arrays.deepToString();
+//        Arrays.equals(intArr,intArr);
+//        Arrays.fill();
+//        Arrays.parallelPrefix();
+
         //值
         Stream<Integer> valueStream = Stream.of(1,2,3,4,5,6,7);
 

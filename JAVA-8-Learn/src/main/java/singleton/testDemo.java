@@ -30,5 +30,7 @@ public class testDemo {
 
         System.out.println(man3.getName());
         System.out.println(man3.getAge());
+
+        HangryMan.out();
     }
 }

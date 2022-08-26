@@ -34,4 +34,8 @@ public class HangryMan {
     public static HangryMan getInstance(){
         return hangryMan;
     }
+
+    public static void out(){
+        System.out.println("类方法");
+    }
 }
