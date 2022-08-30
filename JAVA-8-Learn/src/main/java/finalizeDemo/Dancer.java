@@ -20,7 +20,7 @@ public class Dancer {
     public Dancer() {
     }
 
-    public String name;
+    private String name;
 
     public String toString(){
         return name;

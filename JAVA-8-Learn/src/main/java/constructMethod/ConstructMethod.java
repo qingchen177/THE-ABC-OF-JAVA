@@ -1,4 +1,4 @@
-package main.java;
+package main.java.constructMethod;
 
 /**
  * 构造方法
