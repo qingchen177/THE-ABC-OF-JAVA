@@ -1,8 +1,6 @@
 package main.java.thread;
 
-import java.util.concurrent.LinkedBlockingQueue;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
+import lombok.SneakyThrows;
 
 /**
  * @author qingchen
@@ -10,10 +8,33 @@ import java.util.concurrent.TimeUnit;
  */
 
 public class demo2 {
-    public static void main(String[] args) {
-        ThreadPoolExecutor executor = new ThreadPoolExecutor(2, 5, 10L, TimeUnit.MILLISECONDS, new LinkedBlockingQueue<>(512));
+    volatile static int k = 0;
 
-        //优雅关闭
-        executor.shutdown();
+    @SneakyThrows
+    public static void main(String[] args) {
+
+        Thread plus = new Thread(() -> {
+            for (int i = 0; i < 10000; i++) {
+                k++;
+            }
+        }, "plus");
+
+        Thread mina = new Thread(() -> {
+            for (int i = 0; i < 10000; i++) {
+                k--;
+            }
+        }, "mina");
+
+        plus.start();
+        mina.start();
+
+        plus.join();
+        mina.join();
+
+        Thread.sleep(2000);
+
+        System.out.println(plus.isAlive());
+        System.out.println(mina.isAlive());
+        System.out.println(k);
     }
 }
