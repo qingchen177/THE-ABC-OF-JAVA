@@ -1,7 +1,7 @@
 package main.java;
 
-import java.util.Arrays;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author qingchen
@@ -10,10 +10,10 @@ import java.util.List;
 
 public class Test {
     public static void main(String[] args) {
-        String str1="0,1,2,3";
+        Map<String, Integer> map = new HashMap<>();
+        map.put("a",1);
+        map.put("a",map.get("a")+2);
 
-        List<String> noticeTypes = Arrays.asList(str1.split(","));
-
-        System.out.println("noticeTypes.contains(DemoEnum.SMS.getCode()) = " + noticeTypes.contains(DemoEnum.SMS.getCode().toString()));
+        System.out.println(map.get("a"));
     }
 }

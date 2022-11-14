@@ -5,7 +5,7 @@ package main.lyrics;
  * @date 13/10/2022 下午 6:57
  */
 
-public class WoAiNi {
+public class 我爱你_卢广仲 {
     public static void main(String[] args) {
         System.out.println("" +
                 "        曾...曾经在我眼前\n" +
