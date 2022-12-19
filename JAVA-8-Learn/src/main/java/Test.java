@@ -1,7 +1,7 @@
 package main.java;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author qingchen
@@ -10,10 +10,17 @@ import java.util.Map;
 
 public class Test {
     public static void main(String[] args) {
-        Map<String, Integer> map = new HashMap<>();
-        map.put("a",1);
-        map.put("a",map.get("a")+2);
+        List<String> list = new ArrayList<String>();
+        list.add("1");
+        list.add("2");
+        for (String item : list) {
+            if ("1".equals(item)) {
+                list.remove(item);
+            }
+        }
+        System.out.println(list);
 
-        System.out.println(map.get("a"));
+        list = new ArrayList<String>();
+        list.add("1");
     }
 }
