@@ -52,7 +52,6 @@ public class ReflectDemo1 {
         try {
             cls3 = Class.forName("java.lang.String");
         } catch (ClassNotFoundException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         System.out.println(cls1 == cls2);
