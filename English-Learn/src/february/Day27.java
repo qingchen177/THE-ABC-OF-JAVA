@@ -1,10 +1,13 @@
 package february;
 
+import lombok.Getter;
+
 /**
  * @author qingchen
  * @date 27/2/2023 下午 5:10
  */
 
+@Getter
 public enum Day27 {
 
     dishonest(1,"不诚实的"),
