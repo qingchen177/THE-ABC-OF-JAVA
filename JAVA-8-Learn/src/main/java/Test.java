@@ -1,8 +1,6 @@
 package main.java;
 
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
 
 /**
  * @author qingchen
@@ -14,18 +12,18 @@ public class Test {
 
         //集合删除问题
 
-        //直接删会报异常
-        List<String> list = new ArrayList<>();
-        list.add("1");
-        list.add("2");
-        list.add("3");
-        list.add("4");
-        for (String item : list) {
-            if ("2".equals(item)) {
-                list.remove(item);
-            }
-        }
-        System.out.println(list);
+//        //直接删会报异常
+//        List<String> list = new ArrayList<>();
+//        list.add("1");
+//        list.add("2");
+//        list.add("3");
+//        list.add("4");
+//        for (String item : list) {
+//            if ("2".equals(item)) {
+//                list.remove(item);
+//            }
+//        }
+//        System.out.println(list);
         //使用迭代器删除才可以
 //        list = new ArrayList<String>();
 //        list.add("1");
@@ -44,11 +42,26 @@ public class Test {
 //
 //        System.out.println(list + "after");
 
-        String uuid= String.valueOf(System.currentTimeMillis());
-        System.out.println(uuid);
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmssSSSS");
-        String number = sdf.format(System.currentTimeMillis());//202211041552160219
-        System.out.println("根据当前时间戳生成唯一："+number);
+        HashMap<Integer,Integer> map = new HashMap<>();
+        map.put(1,1);
+        map.put(2,2);
+        map.put(3,3);
+        map.put(4,4);
+        map.put(5,5);
+
+        map.forEach((key,value) -> {
+            System.out.println("key = " + key);
+            System.out.println("value = " + value);
+            System.out.println(map.size());
+            map.remove(key);
+        });
+
+
+//        String uuid= String.valueOf(System.currentTimeMillis());
+//        System.out.println(uuid);
+//        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmssSSSS");
+//        String number = sdf.format(System.currentTimeMillis());//202211041552160219
+//        System.out.println("根据当前时间戳生成唯一："+number);
 //        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
 //        String now = sdf.format(new Date());
 //        System.out.println(now.substring(0,10)+"///");
