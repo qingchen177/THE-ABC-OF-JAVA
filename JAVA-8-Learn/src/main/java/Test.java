@@ -10,6 +10,13 @@ import java.util.HashMap;
 public class Test {
     public static void main(String[] args) {
 
+        StringBuilder sb = new StringBuilder();
+
+        for (int i = 0; i < 3; i++) {
+            sb.append(1).append(",");
+        }
+        System.out.println(sb.substring(0, sb.length() -1));
+
         //集合删除问题
 
 //        //直接删会报异常

@@ -27,7 +27,7 @@ public class HangryMan {
         this.age = age;
     }
 
-    private HangryMan(){}
+    public HangryMan(){}
 
     private static HangryMan hangryMan=new HangryMan();
 

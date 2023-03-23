@@ -1,6 +1,6 @@
 package main.test;
 
-import java.util.HashMap;
+import main.java.singleton.HangryMan;
 
 /**
  * @author qingchen
@@ -9,7 +9,15 @@ import java.util.HashMap;
 
 public class DailyTest {
     public static void main(String[] args) {
-        HashMap<String,Object> map = new HashMap<String,Object>();
-        System.out.println("map = " + map);
+
+        HangryMan hangryMan = new HangryMan();
+        hangryMan.setName("Daily");
+        setAge(hangryMan);
+
+        System.out.println("hangryMan = " + hangryMan.getName()+"\n"+hangryMan.getAge()+"\n");
+    }
+
+    private static void setAge(HangryMan hangryMan) {
+        hangryMan.setAge(10);
     }
 }
