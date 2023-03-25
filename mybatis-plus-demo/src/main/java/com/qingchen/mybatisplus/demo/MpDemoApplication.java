@@ -1,4 +1,4 @@
-package com.example.mp_demo;
+package com.qingchen.mybatisplus.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

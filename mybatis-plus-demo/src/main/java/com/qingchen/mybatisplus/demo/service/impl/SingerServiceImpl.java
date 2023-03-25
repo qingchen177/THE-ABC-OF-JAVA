@@ -1,8 +1,8 @@
-package com.example.mp_demo.service.impl;
+package com.qingchen.mybatisplus.demo.service.impl;
 
-import com.example.mp_demo.entity.Singer;
-import com.example.mp_demo.mapper.SingerMapper;
-import com.example.mp_demo.service.SingerService;
+import com.qingchen.mybatisplus.demo.entity.Singer;
+import com.qingchen.mybatisplus.demo.mapper.SingerMapper;
+import com.qingchen.mybatisplus.demo.service.SingerService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 

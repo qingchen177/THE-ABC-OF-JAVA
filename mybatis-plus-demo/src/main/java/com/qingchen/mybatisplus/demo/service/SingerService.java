@@ -1,6 +1,6 @@
-package com.example.mp_demo.service;
+package com.qingchen.mybatisplus.demo.service;
 
-import com.example.mp_demo.entity.Singer;
+import com.qingchen.mybatisplus.demo.entity.Singer;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

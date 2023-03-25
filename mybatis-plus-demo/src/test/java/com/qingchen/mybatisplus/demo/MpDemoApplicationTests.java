@@ -1,12 +1,12 @@
-package com.example.mp_demo;
+package com.qingchen.mybatisplus.demo;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.example.mp_demo.entity.Singer;
-import com.example.mp_demo.mapper.SingerMapper;
-import com.example.mp_demo.service.SingerService;
+import com.qingchen.mybatisplus.demo.entity.Singer;
+import com.qingchen.mybatisplus.demo.mapper.SingerMapper;
+import com.qingchen.mybatisplus.demo.service.SingerService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

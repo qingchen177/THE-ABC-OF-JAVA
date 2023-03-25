@@ -7,7 +7,6 @@ import redis.clients.jedis.Jedis;
  * @author qingchen
  * @date 23/3/2023 下午 1:57
  */
-
 public class RedisDemo {
     public static void main(String[] args) {
         Jedis jedis = JedisPoolUtil.getJedis();

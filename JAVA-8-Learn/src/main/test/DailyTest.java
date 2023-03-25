@@ -1,7 +1,5 @@
 package main.test;
 
-import main.java.singleton.HangryMan;
-
 /**
  * @author qingchen
  * @date 16/2/2023 下午 3:15
@@ -9,15 +7,19 @@ import main.java.singleton.HangryMan;
 
 public class DailyTest {
     public static void main(String[] args) {
-
-        HangryMan hangryMan = new HangryMan();
-        hangryMan.setName("Daily");
-        setAge(hangryMan);
-
-        System.out.println("hangryMan = " + hangryMan.getName()+"\n"+hangryMan.getAge()+"\n");
+        System.out.println("args = " + division());
     }
 
-    private static void setAge(HangryMan hangryMan) {
-        hangryMan.setAge(10);
+    public static int division() {
+
+        int result = 0;
+
+        try {
+            result = 5 / 0;
+        } catch (Exception e){
+            e.printStackTrace();
+            return result;
+        }
+        return result;
     }
 }

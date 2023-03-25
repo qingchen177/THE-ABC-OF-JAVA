@@ -12,9 +12,8 @@ import java.util.Properties;
  * @author qingchen
  * @date 23/3/2023 上午 11:47
  */
-
 public class JedisPoolUtil {
-    private static JedisPool jedisPool;
+    private static final JedisPool jedisPool;
 
     static {
         //读取配置文件

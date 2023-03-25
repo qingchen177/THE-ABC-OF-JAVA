@@ -1,4 +1,4 @@
-package com.example.mp_demo.entity;
+package com.qingchen.mybatisplus.demo.entity;
 
 import lombok.Data;
 

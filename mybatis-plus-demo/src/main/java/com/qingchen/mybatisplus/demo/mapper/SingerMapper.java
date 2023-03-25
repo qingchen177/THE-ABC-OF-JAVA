@@ -1,6 +1,6 @@
-package com.example.mp_demo.mapper;
+package com.qingchen.mybatisplus.demo.mapper;
 
-import com.example.mp_demo.entity.Singer;
+import com.qingchen.mybatisplus.demo.entity.Singer;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 
