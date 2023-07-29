@@ -1,4 +1,4 @@
-package com.qingchen.mybatisplus.demo.utils;
+package com.qingchen.mybatisplus.demo.util;
 
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.IdType;
