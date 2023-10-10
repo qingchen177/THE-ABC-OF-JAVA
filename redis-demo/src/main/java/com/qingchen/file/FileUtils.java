@@ -35,7 +35,8 @@ public class FileUtils {
         if(!folder.exists()){
             folder.mkdirs();
         }
-        String saveName = originName;
+        Date now = new Date();
+        String saveName = now.getTime() + originName;
         try {
             file.transferTo(new File(folder,saveName));
             String filePath = savePath + "\\" + saveName;
