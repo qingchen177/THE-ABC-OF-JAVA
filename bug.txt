@@ -1,0 +1,5 @@
+div方法出现异常
+异常的名称：java.lang.ArithmeticException: / by zero
+异常的原因：null
+----------------
+本次测试一共出现1次异常
