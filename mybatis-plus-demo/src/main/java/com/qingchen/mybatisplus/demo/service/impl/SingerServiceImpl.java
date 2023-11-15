@@ -1,5 +1,6 @@
 package com.qingchen.mybatisplus.demo.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.qingchen.mybatisplus.demo.entity.Singer;
 import com.qingchen.mybatisplus.demo.mapper.SingerMapper;
 import com.qingchen.mybatisplus.demo.service.SingerService;
@@ -17,4 +18,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class SingerServiceImpl extends ServiceImpl<SingerMapper, Singer> implements SingerService {
 
+    @Override
+    public void updateCustomSql(LambdaQueryWrapper<Singer> wrapper) {
+        baseMapper.updateCustomSql(wrapper);
+    }
 }

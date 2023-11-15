@@ -1,9 +1,10 @@
 package com.qingchen.file;
 
+import org.springframework.core.io.Resource;
+import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -48,11 +49,13 @@ public class FileUtils {
     }
 
     public static void main(String[] args) throws IOException {
-        File file = new File("C:\\Users\\pc\\Desktop\\PL.AN.md");
-        FileInputStream fileInputStream = new FileInputStream(file);
-        MultipartFile multipartFile = new MultipartFileDto(file.getName(),file.getName(), null, fileInputStream);
-        uploadToLocal( multipartFile);
-    }
+//        File file = new File("C:\\Users\\pc\\Desktop\\PL.AN.md");
+//        FileInputStream fileInputStream = new FileInputStream(file);
+//        MultipartFile multipartFile = new MultipartFileDto(file.getName(),file.getName(), null, fileInputStream);
+//        uploadToLocal( multipartFile);
 
+        Resource[] resources = new PathMatchingResourcePatternResolver().getResources("classpath:/**/*.properties");
+        System.out.println(resources.length);
+    }
 
 }

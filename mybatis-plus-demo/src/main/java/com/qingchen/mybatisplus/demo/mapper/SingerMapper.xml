@@ -15,4 +15,8 @@
         id, name, age, other
     </sql>
 
+    <update id="updateCustomSql">
+        UPDATE singer SET age=age-10 ${ew.customSqlSegment};
+    </update>
+
 </mapper>
